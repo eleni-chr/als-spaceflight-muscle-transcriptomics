@@ -10,6 +10,8 @@ This repository contains all the data analysis code and figure generation code a
 
 **Code author:** Dr Eleni Christoforidou
 
+_Copyright (c) 2026 Dr Eleni Christoforidou_
+
 ## Contents
 
 The scripts are numbered in the order of the analysis workflow.
