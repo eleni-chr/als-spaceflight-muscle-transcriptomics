@@ -1396,7 +1396,7 @@ load_unloading_recovery_effects <- function() {
   message("\nGenes available per loading comparison:")
   print(
     out %>%
-      count(study_id, role, name = "n_genes") %>%
+      dplyr::count(study_id, role, name = "n_genes") %>%
       arrange(role, study_id)
   )
 
@@ -1837,7 +1837,7 @@ read_gse250455 <- function(path) {
   }
 
   pairing <- meta %>%
-    count(participant, condition) %>%
+    dplyr::count(participant, condition) %>%
     pivot_wider(names_from = condition, values_from = n, values_fill = 0)
 
   if (!all(pairing$Pre == 1 & pairing$Post == 1)) {
@@ -2379,9 +2379,9 @@ writeLines(
 
 message("\nSOD1 rows by stage BEFORE and AFTER mouse-to-human mapping:")
 sod1_stage_counts <- sod1_mouse %>%
-  count(stage, name = "n_mouse_significant_genes") %>%
+  dplyr::count(stage, name = "n_mouse_significant_genes") %>%
   left_join(
-    sod1 %>% count(stage, name = "n_human_ortholog_genes"),
+    sod1 %>% dplyr::count(stage, name = "n_human_ortholog_genes"),
     by = "stage"
   ) %>%
   mutate(
