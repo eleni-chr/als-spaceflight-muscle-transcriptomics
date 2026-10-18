@@ -56,9 +56,9 @@ reference <- data.frame(
     "Glycolysis/gluconeogenesis",
     "Fructose and mannose metabolism",
     "Carbon metabolism",
-    "AMPK signalling",
-    "Insulin signalling",
-    "Glucagon signalling",
+    "AMPK signaling pathway",
+    "Insulin signaling pathway",
+    "Glucagon signaling pathway",
     "Purine metabolism",
     "Pentose phosphate pathway",
     "Starch and sucrose metabolism"
@@ -73,7 +73,7 @@ reference <- data.frame(
 # "Carbon metabolism" with "Central carbon metabolism in cancer".
 normalize_term <- function(x) {
   x <- tolower(trimws(as.character(x)))
-  x <- gsub("signalling", "signaling", x, fixed = TRUE)
+  x <- gsub("signaling", "signaling", x, fixed = TRUE)
   gsub("[^a-z0-9]", "", x)
 }
 
