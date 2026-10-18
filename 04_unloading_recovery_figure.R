@@ -451,16 +451,8 @@ make_reversal_data <- function(
   # ----------------------------------------------------------
   
   duplicates <- d %>%
-    
-    count(
-      pathway_set,
-      pathway,
-      phase
-    ) %>%
-    
-    filter(
-      n > 1
-    )
+    dplyr::count(pathway_set, pathway, phase) %>%
+    dplyr::filter(n > 1)
   
   
   if (nrow(duplicates) > 0) {
@@ -479,7 +471,7 @@ make_reversal_data <- function(
   
   d <- d %>%
     
-    select(
+    dplyr::select(
       pathway_set,
       pathway,
       phase,
@@ -636,7 +628,7 @@ cat("OSD-21 pathways:\n")
 
 print(
   osd21 %>%
-    select(
+    dplyr::select(
       pathway_set,
       pathway
     )
@@ -648,7 +640,7 @@ cat("OSD-540 pathways:\n")
 
 print(
   osd540 %>%
-    select(
+    dplyr::select(
       pathway_set,
       pathway
     )
@@ -673,7 +665,7 @@ source_dat <- bind_rows(
   
 ) %>%
   
-  select(
+  dplyr::select(
     
     dataset,
     pathway_set,
