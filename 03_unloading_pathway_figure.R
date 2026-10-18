@@ -68,7 +68,7 @@ read_gsea <- function(file, comparison_name) {
   }
   
   x %>%
-    select(pathway, NES, padj) %>%
+    dplyr::select(pathway, NES, padj) %>%
     mutate(
       comparison = comparison_name,
       pathway_upper = toupper(pathway)
@@ -535,7 +535,7 @@ ggsave(
 # =============================================================================
 
 figure4_source_data <- figure4_data %>%
-  select(
+  dplyr::select(
     pathway_group,
     comparison,
     pathway,
