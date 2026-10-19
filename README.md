@@ -12,7 +12,7 @@ This repository contains the analysis and figure-generation code accompanying a 
 
 _Copyright (c) 2026 Dr Eleni Christoforidou_
 
-This release’s code snapshot is archived on Zenodo and can be cited using [![DOI](https://zenodo.org/badge/1423287510.svg)](https://doi.org/10.5281/zenodo.23441272)
+This code repository is archived on Zenodo and can be cited using [![DOI](https://zenodo.org/badge/1423287510.svg)](https://doi.org/10.5281/zenodo.23441272)
 
 ## Contents
 
