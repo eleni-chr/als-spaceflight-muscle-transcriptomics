@@ -1,4 +1,4 @@
-# Analysis of Muscle Transcriptomic Signatures in Spaceflight and Mechanical Unloading
+# Analysis of Muscle Transcriptomic Signatures in ALS, Spaceflight and Mechanical Unloading
 
 Analysis code and documentation covering skeletal-muscle transcriptomic and proteomic analyses across ALS, spaceflight, mechanical unloading, recovery, exercise, and denervation.
 
